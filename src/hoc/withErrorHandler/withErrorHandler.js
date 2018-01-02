@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Modal from '../../components/UI/Modal/Modal';
 import Aux from '../Aux/Aux';
 
@@ -21,8 +20,6 @@ const withErrorHandler = (WrappedComponent, axios) => {
     }
 
     componentWillUnmount() {
-      // console.log('[Will Unmount]', this.reqInterceptor, this.resInterceptor)
-      // clean up the interceptors...
       axios.interceptors.request.eject(this.reqInterceptor)
       axios.interceptors.response.eject(this.resInterceptor)
     }
@@ -47,24 +44,3 @@ const withErrorHandler = (WrappedComponent, axios) => {
 }
 
 export default withErrorHandler;
-
-// show it, get it working....
-// import React from 'react';
-
-// import Modal from '../../components/UI/Modal/Modal';
-// import Aux from '..//Aux/Aux';
-
-// const withErrorHandler = (WrappedComponent) => {
-//   return (props) => {
-//     return (
-//       <Aux>
-//         <Modal show>
-//           Something didn't work!
-//         </Modal>
-//         <WrappedComponent {...props} />
-//       </Aux>
-//     );
-//   };
-// }
-
-// export default withErrorHandler;
