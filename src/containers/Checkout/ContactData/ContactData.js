@@ -116,7 +116,6 @@ class ContactData extends Component {
       // valid: formData.valid,
     };
 
-    console.log('order: ', order);
     axios.post('/orders.json', order)
       .then(response => {
         this.setState({ loading: false });
@@ -139,9 +138,6 @@ class ContactData extends Component {
     if (rules.maxLength) {
       isValid = value.trim().length <= rules.maxLength && isValid;
     }
-    console.log('value', value)
-    console.log('rules', rules)
-    console.log('isValid', isValid)
     return isValid;
   }
 
