@@ -75,9 +75,8 @@ export const fetchOrders = () => {
           });
         }
         setTimeout(() => {
-          alert('Microsoft is making your burger. Please be patient and click OK to see your orders.')
           dispatch(fetchOrdersSuccess(fetchedOrders))
-        }, 3000);
+        }, 1800);
       })
       .catch(error => {
         dispatch(fetchOrdersFail(error))
