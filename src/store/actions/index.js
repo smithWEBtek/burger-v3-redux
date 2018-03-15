@@ -17,6 +17,9 @@ export {
 	fetchOrders
 } from './order';
 
+export {
+	auth
+} from './auth';
 
 // the only actionCreators needed in this file, are ones that are called from containers or components
 // who is calling who? 
